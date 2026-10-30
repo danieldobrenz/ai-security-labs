@@ -1,0 +1,28 @@
+sbom: ./app.sbom.json
+
+policy:
+  path: ./cognitive-policy.md
+
+target:
+  url: http://localhost:8000
+  endpoint: /chat
+  chat_payload_key: message
+  chat_response_key: response
+  auth:
+    type: none
+
+llm:
+  model: ollama_chat/mistral
+
+redteam:
+  profile: standard
+  scenarios:
+    - non-destructive
+  request_timeout: 300
+  scenario_timeout: 900
+  max_concurrent_requests: 1
+  turn_delay_seconds: 0
+  llm:
+    model: ${NUGUARD_REDTEAM_LLM_MODEL}
+  eval_llm:
+    model: ollama_chat/qwen2.5:14b

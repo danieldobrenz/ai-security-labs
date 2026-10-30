@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+*.ipynb_checkpoints
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+hospital_core.log
+
+# NuGuard cache & outputs
+reports/
+*.sbom.json
+*.sbom.enriched.json
+redteam-judge-*.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backups
+*.bak
+*.backup
+*~
+
+# Old notebook versions (keep _FINAL only)
+medical_redteam_attacks_fixed.ipynb
+hospital_app_server.py
